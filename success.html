@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>Success</title>
+
+        <!-- Bootstrap core CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <style>
+            body{
+                height: 100%;
+            }
+            
+            .gearGroup {
+                height: 262px;
+                width: 100%;
+                top: 0;
+                position: absolute;
+                overflow: hidden;
+                z-index: 0;
+            }
+
+            .gear {
+                margin: 150px auto 0;
+                width: 500px;
+                height: 500px;
+                background-image: url("../img/gear.svg");
+                animation: gear1 linear infinite;
+                animation-duration: 30s;
+            }
+
+            @keyframes gear1 {
+                from {transform: rotate(0deg);}
+                to {transform: rotate(360deg);}
+            }
+
+            .container {
+                position: relative;
+                z-index: 1;
+            }
+        </style>
+
+    </head>
+    <body>
+        <div class="jumbotron jumbotron-fluid">
+            <div class="container">
+                <h1 class="font-weight-bolder">Congratulations!!</h1>
+                <p>YOU ARE SUCCESSFULLY SIGNED UP, THANK YOU.</p>
+                <button name="backBtn" class="btn btn-primary">Back</button>
+                <!-- <a name="backBtn" class="btn btn-primary">Back</a> -->
+                
+            </div>
+            <div class="gearGroup">
+                <div class="gear"></div>
+            </div>
+        </div>
+        
+    </body>
+</html>
