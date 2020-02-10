@@ -10,14 +10,6 @@ app.get("/", (req, res) => {
     res.sendFile(__dirname + "/signup.html");
 })
 
-// app.post("/success.html", (req, res) => {
-//     let backBtn = req.body.backBtn;
-
-//     if (backBtn) {
-//         res.redirect(__dirname + "/");
-//     }
-// })
-
 app.post("/", (req, res) => {
     let last = req.body.last;
     let first = req.body.first;
@@ -61,7 +53,15 @@ app.post("/", (req, res) => {
     });
 });
 
-app.listen(3000, () => {
+app.post("/failure", (req, res) => {
+        res.redirect("/");
+})
+
+app.post("/success", (req, res) => {
+        res.redirect("/");
+})
+
+app.listen(process.env.PORT || 3000, () => {
     console.log("Server is running on port 3000");
 });
 
